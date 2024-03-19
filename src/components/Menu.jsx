@@ -23,7 +23,8 @@ const Menu = () => {
   };
   return (
     <div
-      className=" w-[200px] z-10 flex flex-col items-start absolute top-12  md:right-32 rounded-md p-4 space-y-4"
+      className=" w-[200px] z-10 flex flex-col items-start absolute top-12 bg-gray-400 
+      text-white md:right-32 rounded-md p-4 space-y-4"
       style={{ border: "2px solid black" }}
     >
       {!user && (
