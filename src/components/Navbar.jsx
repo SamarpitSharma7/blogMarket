@@ -20,10 +20,10 @@ const Navbar = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <div className="flex items-center bg-white justify-between px-6 md:px-[200px] py-4 shadow-2xl">
-      <h1 className="text-lg md:text-xl font-extrabold">
-        <Link to="/">Writer's Realm</Link>
-      </h1>
+    <div className="flex items-center justify-between px-6 md:px-[200px] py-4 bg-blue-600 text-white text-sm">
+    <h1 className="text-lg md:text-xl font-bold">
+      <Link to="/"> Writer's Realm</Link>
+    </h1>
       {path === "/" && (
         <div className="flex justify-center items-center space-x-0">
           <p
