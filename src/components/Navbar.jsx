@@ -32,7 +32,7 @@ const Navbar = () => {
             }
             className="cursor-pointer"
           >
-            <BsSearch className="mx-2" />
+            <BsSearch size={20} className="mx-2" />
           </p>
           <input
             onChange={(e) => setPrompt(e.target.value)}
@@ -57,7 +57,7 @@ const Navbar = () => {
         {user ? (
           <div onClick={showMenu}>
             <p className="cursor-pointer">
-              <FaBars />
+              <FaBars size={25} />
             </p>
             {menu && <Menu />}
           </div>
