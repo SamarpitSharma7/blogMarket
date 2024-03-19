@@ -20,7 +20,7 @@ const Navbar = () => {
   const { user } = useContext(UserContext);
 
   return (
-    <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
+    <div className="flex items-center bg-white justify-between px-6 md:px-[200px] py-4 shadow-2xl">
       <h1 className="text-lg md:text-xl font-extrabold">
         <Link to="/">Writer's Realm</Link>
       </h1>
@@ -44,9 +44,10 @@ const Navbar = () => {
       )}
       <div className="hidden md:flex items-center justify-center space-x-2 md:space-x-4">
         {user ? (
-          <h3>
-            <Link to="/write">Write</Link>
-          </h3>
+          <button className="px-4 py-2 border-2 rounded-xl bg-[#401f71] text-white border-black">
+            Write
+            <Link to="/write"></Link>
+          </button>
         ) : (
           <h3>
             <Link to="/login">Login</Link>
@@ -54,7 +55,7 @@ const Navbar = () => {
         )}
         {user ? (
           <div onClick={showMenu}>
-            <p className="cursor-pointer relative">
+            <p className="cursor-pointer">
               <FaBars />
             </p>
             {menu && <Menu />}

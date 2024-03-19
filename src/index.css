@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  background-color: rgb(222, 216, 209) !important;
-  color: black !important;
-}
+/* * {
+  /* background-color: rgb(222, 216, 209) !important; */
+/* color: black !important; */
 
-button {
+/* button {
   border: 2px solid black;
   border-radius: 4px;
   background: black !important;
   color: white !important;
-}
+} */
+/* input {
+  color: white;
+} */
