@@ -120,7 +120,11 @@ const PostDetails = () => {
               <p>{new Date(post.updatedAt).toString().slice(16, 24)}</p>
             </div>
           </div>
-          <img src={IF + post.photo} className="w-full  mx-auto mt-8" alt="" />
+          <img
+            src={IF + post.photo}
+            className="w-[50%] h-[50%]  mx-auto mt-8 border-2 rounded shadow-lg object-cover p-4"
+            alt=""
+          />
           <p className="mx-auto mt-8">{post.desc}</p>
           <div className="flex items-center mt-8 space-x-4 font-semibold">
             <p>Categories:</p>
@@ -146,11 +150,11 @@ const PostDetails = () => {
               onChange={(e) => setComment(e.target.value)}
               type="text"
               placeholder="Write a comment"
-              className="md:w-[80%] outline-none py-2 px-4 mt-4 md:mt-0"
+              className="md:w-[80%] rounded border border-gray-400 mx-2 py-2 px-4 mt-4 md:mt-0"
             />
             <button
               onClick={postComment}
-              className="bg-black text-sm text-white px-2 py-2 md:w-[20%] mt-4 md:mt-0"
+              className="bg-blue-800 text-sm rounded text-white px-2 py-2 md:w-[20%] mt-4 md:mt-0"
             >
               Add Comment
             </button>

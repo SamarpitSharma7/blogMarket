@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between px-6 md:px-[200px] py-4 bg-blue-900 text-white text-sm">
-    <h1 className="text-lg md:text-xl font-bold">
-      <Link to="/"> Writer's Realm</Link>
-    </h1>
+      <h1 className="text-lg md:text-xl font-bold">
+        <Link to="/"> Writer's Realm</Link>
+      </h1>
       {path === "/" && (
         <div className="flex justify-center items-center space-x-0">
           <p
@@ -36,7 +36,7 @@ const Navbar = () => {
           </p>
           <input
             onChange={(e) => setPrompt(e.target.value)}
-            className="outline  rounded px-3 "
+            className="border-gray  rounded px-3 text-black py-2 w- "
             placeholder="Search a post"
             type="text"
           />
@@ -44,10 +44,11 @@ const Navbar = () => {
       )}
       <div className="hidden md:flex items-center justify-center space-x-2 md:space-x-4">
         {user ? (
-          <button className="px-4 py-2 border-2 rounded-xl bg-[#401f71] text-white border-black">
-            Write
-            <Link to="/write"></Link>
-          </button>
+          <Link to="/write">
+            <button className="px-4 py-2 border-2 rounded-xl bg-black text-white border-white">
+              Write
+            </button>
+          </Link>
         ) : (
           <h3>
             <Link to="/login">Login</Link>
@@ -66,10 +67,10 @@ const Navbar = () => {
           </h3>
         )}
       </div>
-      <div onClick={showMenu} className="md:hidden text-lg">
-        <p className="cursor-pointer relative">
+      <div onClick={showMenu} className="md:hidden text-lg ">
+        <div className="cursor-pointer relative ">
           <FaBars />
-        </p>
+        </div>
         {menu && <Menu />}
       </div>
     </div>

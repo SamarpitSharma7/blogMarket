@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-gray-400">
+      <div className="">
         <Navbar />
         <div className="px-8 md:px-[200px] min-h-[80vh] ">
           {loader ? (

@@ -4,16 +4,16 @@ import { IF } from "../url";
 const HomePosts = ({ post }) => {
   return (
     <div
-      className="w-full flex mt-8 space-x-4
+      className="w-[70%] flex mt-8 space-x-4 ml-[150px]
         px-4 bg-white shadow-xl rounded-lg text-gray-900 "
     >
       {/* left */}
-      <div className="w-[35%] h-[200px] flex justify-center items-center relative">
+      <div className="w-[35%] h-[200px] flex justify-center items-center align-center relative">
         <img
           src={IF + post.photo}
           alt=""
           className="object-cover object-center h-32
-          hover:bg-transparent transition duration-300 absolute bottom-0 top-5 right-0 left-5 bg-gray-900 opacity-2"
+          "
         />
       </div>
       {/* right */}
