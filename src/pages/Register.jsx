@@ -57,8 +57,8 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
-        <h1 className="text-lg md:text-xl font-extrabold">
+      <div className="flex items-center justify-between px-6 md:px-[200px] py-4 bg-blue-900 text-white text-sm">
+        <h1 className="text-lg md:text-xl font-bold">
           <Link to="/"> Writer's Realm</Link>
         </h1>
         <h3>
@@ -68,27 +68,28 @@ const Register = () => {
       <div className="w-full flex justify-center items-center h-[80vh] ">
         <div className="flex flex-col justify-center items-center space-y-4 w-[80%] md:w-[25%]">
           <h1 className="text-xl font-bold text-left">Create an account</h1>
+          
           <input
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black outline-0"
+            className="w-full px-4 py-2 border border-[#7f87b2] rounded outline-0 shadow-md hover:shadow-lg active:shadow-lg"
             type="text"
             placeholder="Enter your username"
           />
           <input
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black outline-0"
+            className="w-full px-4 py-2 border border-[#7f87b2] rounded outline-0 shadow-md hover:shadow-lg active:shadow-lg"
             type="email"
             placeholder="Enter your email"
           />
           <input
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border-2 border-black outline-0"
+            className="w-full px-4 py-2 border border-[#7f87b2] rounded outline-0 shadow-md hover:shadow-lg active:shadow-lg"
             type="password"
             placeholder="Enter your password"
           />
           <button
             onClick={handleRegister}
-            className="w-full px-4 py-4 text-lg font-bold text-white bg-black rounded-lg hover:bg-gray-500 hover:text-black"
+            className="w-full px-4 py-4 text-lg font-bold text-white bg-blue-800 rounded-lg hover:bg-blue-900 hover:text-white transition duration-150 ease-in-out"
           >
             Register
           </button>
@@ -100,11 +101,14 @@ const Register = () => {
           )}
           <div className="flex justify-center items-center space-x-3">
             <p>Already have an account?</p>
-            <p className="text-gray-500 hover:text-black">
+            <p className="text-blue-600 hover:text-blue-700 transition duration-150 ease-in-out">
               <Link to="/login">Login</Link>
             </p>
           </div>
+   
+
         </div>
+        
       </div>
       <Footer />
     </>
